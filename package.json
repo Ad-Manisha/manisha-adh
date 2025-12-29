@@ -6,10 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:dev": "vite build --mode development",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
+    "fix-paths": "node fix-paths.js",
+    "predeploy": "npm run build && npm run fix-paths",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
